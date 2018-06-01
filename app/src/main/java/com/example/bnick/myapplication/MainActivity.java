@@ -69,4 +69,11 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
 
     }
+    public static final String EXTRA_MESSAGE = "com.example.nickbhattacharya.mycontactapp_px.MESSAGE";
+    public void searchRecord(View view){
+        Log.d("MyContactApp", "MainActivity: showMessage: Launching SearchActivity");
+        android.content.Intent intent = new android.content.Intent(this, SearchActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, editName.getText().toString());
+        startActivity(intent);
+    }
 }
